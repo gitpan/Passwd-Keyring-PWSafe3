@@ -1,0 +1,7 @@
+Revision history for Passwd::Keyring::PWSafe3
+
+0.10	2012-11-15
+        Initial release. Works and implements full keyring API,
+        although limited performance of Crypt::PWSafe3 seriously
+        limits usefulness of save operations.
+
