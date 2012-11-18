@@ -3,7 +3,7 @@ NAME
     encrypted files
 
 VERSION
-    Version 0.10
+    Version 0.1001
 
 SYNOPSIS
     Password Safe implementation of Passwd::Keyring. Passwords are stored in

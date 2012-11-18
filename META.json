@@ -45,7 +45,7 @@
    "provides" : {
       "Passwd::Keyring::PWSafe3" : {
          "file" : "lib/Passwd/Keyring/PWSafe3.pm",
-         "version" : "0.10"
+         "version" : "0.1001"
       }
    },
    "release_status" : "stable",
@@ -61,5 +61,5 @@
          "url" : "http://bitbucket.org/Mekk/perl-keyring-pwsafe3"
       }
    },
-   "version" : "0.10"
+   "version" : "0.1001"
 }

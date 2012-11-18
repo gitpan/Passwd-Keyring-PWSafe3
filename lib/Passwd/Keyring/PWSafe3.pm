@@ -15,11 +15,11 @@ Passwd::Keyring::PWSafe3 - Password storage based on Password Safe encrypted fil
 
 =head1 VERSION
 
-Version 0.10
+Version 0.1001
 
 =cut
 
-our $VERSION = '0.10';
+our $VERSION = '0.1001';
 
 our $APP_NAME = "Passwd::Keyring";
 our $FOLDER_NAME = "Perl-Passwd-Keyring";

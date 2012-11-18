@@ -9,5 +9,5 @@ foreach my $uuid ($vault->looprecord) {
     $vault->modifyrecord($uuid, passwd => 'new-password');
 }
 
-$vault->save("another.psafe3");
+$vault->save(file => "another.psafe3", passwd => 'blah blah');
 

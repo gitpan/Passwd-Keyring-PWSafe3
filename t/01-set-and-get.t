@@ -7,7 +7,7 @@ use File::Spec;
 use FindBin;
 
 if($ENV{PWSAFE_FULL_TEST}) {
-    plan tests => 9;
+    plan tests => 8;
 } else {
     plan skip_all => "Skipped as runs fairly slowly. Set environment variable PWSAFE_FULL_TEST to execute this test.";
 }
