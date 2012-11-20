@@ -8,10 +8,10 @@ use FindBin;
 
 # TODO: make some non-conditional test, read only one
 
-if($ENV{PWSAFE_FULL_TEST}) {
+unless($ENV{PWSAFE_SKIP_TEST}) {
     plan tests => 7;
 } else {
-    plan skip_all => "Skipped as runs fairly slowly. Set environment variable PWSAFE_FULL_TEST to execute this test.";
+    plan skip_all => "Skipped as PWSAFE_SKIP_TEST is set.";
 }
 
 #BEGIN {

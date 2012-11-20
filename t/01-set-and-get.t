@@ -5,16 +5,21 @@ use warnings;
 use Test::More;
 use File::Spec;
 use FindBin;
+use File::Copy;
 
-if($ENV{PWSAFE_FULL_TEST}) {
+# Copying example database
+copy(File::Spec->catfile($FindBin::Bin, "sampledb", "test.psafe3"),
+     $FindBin::Bin);
+
+unless($ENV{PWSAFE_SKIP_TEST}) {
     plan tests => 8;
 } else {
-    plan skip_all => "Skipped as runs fairly slowly. Set environment variable PWSAFE_FULL_TEST to execute this test.";
+    plan skip_all => "Skipped as PWSAFE_SKIP_TEST is set.";
 }
 
 use Passwd::Keyring::PWSafe3;
 
-my $DBFILE = File::Spec->catfile($FindBin::Bin, "sampledb", "test.psafe3");
+my $DBFILE = File::Spec->catfile($FindBin::Bin, "test.psafe3");
 
 # No lazy_save, on purpose, let's check also no lazy save mode
 my $ring = Passwd::Keyring::PWSafe3->new(

@@ -19,7 +19,11 @@ my $builder = Module::Build->new(
     },
     requires => {
         'perl' => 5.006,
-        'Crypt::PWSafe3' => '1.05', # 1.05 fixes windows problems and taint
+        'Crypt::PWSafe3' => '1.07', # 1.07 fixes huge performance problems...
+        'Bytes::Random::Secure' => '0.09', # ... but only when this is present
+    },
+    recommends => {
+        'Math::Random::ISAAC::XS' => 0,  # makes Bytes::Random::Secure faster
     },
 
     create_makefile_pl => 'traditional',

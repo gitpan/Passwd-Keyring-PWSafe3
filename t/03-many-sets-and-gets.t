@@ -6,15 +6,15 @@ use Test::More;
 use File::Spec;
 use FindBin;
 
-if($ENV{PWSAFE_FULL_TEST}) {
+unless($ENV{PWSAFE_SKIP_TEST}) {
     plan tests => 11;
 } else {
-    plan skip_all => "Skipped as runs fairly slowly. Set environment variable PWSAFE_FULL_TEST to execute this test.";
+    plan skip_all => "Skipped as PWSAFE_SKIP_TEST is set.";
 }
 
 use Passwd::Keyring::PWSafe3;
 
-my $DBFILE = File::Spec->catfile($FindBin::Bin, "sampledb", "test.psafe3");
+my $DBFILE = File::Spec->catfile($FindBin::Bin, "test.psafe3");
 my $SOME_REALM = 'my@@realm';
 my $OTHER_REALM = 'other realm';
 

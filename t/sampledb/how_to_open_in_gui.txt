@@ -1,4 +1,0 @@
-Download Password Safe from http://passwordsafe.sourceforge.net/downloads.shtml
-
-Use master password: 10101010
-

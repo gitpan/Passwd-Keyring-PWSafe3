@@ -27,5 +27,5 @@ t/pod-coverage.t
 t/pod.t
 t/sampledb/control_print.pl
 t/sampledb/control_save.pl
-t/sampledb/how_to_open_in_gui.txt
 t/sampledb/test.psafe3
+t/sampledb/what_it_is_and_how_to_open.txt

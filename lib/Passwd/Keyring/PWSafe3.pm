@@ -15,11 +15,11 @@ Passwd::Keyring::PWSafe3 - Password storage based on Password Safe encrypted fil
 
 =head1 VERSION
 
-Version 0.1001
+Version 0.20
 
 =cut
 
-our $VERSION = '0.1001';
+our $VERSION = '0.20';
 
 our $APP_NAME = "Passwd::Keyring";
 our $FOLDER_NAME = "Perl-Passwd-Keyring";
@@ -76,23 +76,14 @@ or from a few objects within one program, are doomed to cause lost
 updates. Also, all passwords from the file are kept in (unprotected)
 memory while keyring object is active. Therefore, it is recommended to
 use separate .psafe3 file for Passwd::Keyring::PWSafe3, not mixing it
-with possibly used normal Password Safe database, and to delete keyring
-object after it is no longer needed.
+with possibly used normal Password Safe database, and to keep keyring
+object for a short time only, especially if modifications happen.
 
 There are some limitations in L<Crypt::PWSafe3> handling of Password
 Safe format. Passwords are read and saved properly and it is possible
 to alternate using them from perl, and via Password Safe GUI, but some
 less important aspects of the format, like password expiraton policy,
 may be ignored. Refer to L<Crypt::PWSafe3> docs for more details.
-
-Finally, at the moment the underlying implementation is very slow,
-depending on the CPU speed opening the ring may take from a few to
-even 15-20 seconds, saving changes is much more costly (4-8 minutes on
-my weak laptop). As L<Crypt::PWSafe3> is at it's early version, one
-may hope for some performance tuning in the future. Using C<lazy_save>
-constructor parameter reduces the cost somewhat, by avoiding costly
-save on every password change. It is also possible to construct
-passwords via Password Safe GUI and use this API only to read them.
 
 =head1 DATA MAPPING
 
@@ -263,10 +254,7 @@ sub clear_password {
 
     my $rec = $self->_find_record($user_name, $realm);
     if($rec) {
-        # Hooking into PwSafe3 internals to avoid artificial clearing method
-        delete $self->{vault}->{record}->{ $rec->uuid };
-        # TODO: offer fix to PwSafe3 to add delete method
-
+        $self->{vault}->deleterecord($rec->uuid);
         $self->save() unless $self->{lazy_save};
         return 1;
     } else {

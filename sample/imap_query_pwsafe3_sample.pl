@@ -4,12 +4,17 @@
 # Non-sensitive data are taken from program args, but password is 
 # got directly from the user and saved in keyring.
 #
-# Try running app a few times. Only on first run there should be
-# password prompt.
+# This sample does not make much sense (user must provide master password
+# to protect single password), for true benefits one should use many
+# passwords in single script (then user would provide single master
+# password instead of many). Still I keep it for comparison with other
+# backends.
+#
+# Some example utilizing many different passwords - welcome
 #
 # Example usage (for gmail):
 #
-# perl imap_query_kdewallet_sample.pl --machine imap.gmail.com --user joe2774 
+# perl imap_query_pwsafe3_sample.pl --machine imap.gmail.com --user joe2774 
 
 {
     package RunMe;
