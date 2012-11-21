@@ -15,11 +15,11 @@ Passwd::Keyring::PWSafe3 - Password storage based on Password Safe encrypted fil
 
 =head1 VERSION
 
-Version 0.20
+Version 0.2001
 
 =cut
 
-our $VERSION = '0.20';
+our $VERSION = '0.2001';
 
 our $APP_NAME = "Passwd::Keyring";
 our $FOLDER_NAME = "Perl-Passwd-Keyring";
@@ -293,8 +293,6 @@ sub is_persistent {
 =head1 AUTHOR
 
 Marcin Kasperski
-
-Approach inspired by L<http://www.perlmonks.org/?node_id=869620>.
 
 =head1 BUGS
 

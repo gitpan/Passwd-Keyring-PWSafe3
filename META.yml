@@ -26,7 +26,7 @@ name: Passwd-Keyring-PWSafe3
 provides:
   Passwd::Keyring::PWSafe3:
     file: lib/Passwd/Keyring/PWSafe3.pm
-    version: 0.20
+    version: 0.2001
 recommends:
   Math::Random::ISAAC::XS: 0
 requires:
@@ -38,4 +38,4 @@ resources:
   homepage: http://bitbucket.org/Mekk/perl-keyring-pwsafe3
   license: http://dev.perl.org/licenses/
   repository: http://bitbucket.org/Mekk/perl-keyring-pwsafe3
-version: 0.20
+version: 0.2001

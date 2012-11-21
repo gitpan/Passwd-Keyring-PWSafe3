@@ -3,7 +3,7 @@ NAME
     encrypted files
 
 VERSION
-    Version 0.20
+    Version 0.2001
 
 SYNOPSIS
     Password Safe implementation of Passwd::Keyring. Passwords are stored in
@@ -126,8 +126,6 @@ SUBROUTINES/METHODS
 
 AUTHOR
     Marcin Kasperski
-
-    Approach inspired by http://www.perlmonks.org/?node_id=869620.
 
 BUGS
     Please report any bugs or feature requests to issue tracker at
