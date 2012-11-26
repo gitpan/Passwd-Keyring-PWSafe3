@@ -4,7 +4,7 @@
       "Marcin Kasperski <Marcin.Kasperski@mekk.waw.pl>"
    ],
    "dynamic_config" : 1,
-   "generated_by" : "Module::Build version 0.4003, CPAN::Meta::Converter version 2.120921",
+   "generated_by" : "Module::Build version 0.38, CPAN::Meta::Converter version 2.120921",
    "keywords" : [
       "passwords",
       "security",
@@ -42,6 +42,8 @@
          "requires" : {
             "Bytes::Random::Secure" : "0.09",
             "Crypt::PWSafe3" : "1.07",
+            "File::ShareDir" : "1.00",
+            "Term::ReadKey" : "0",
             "perl" : "5.006"
          }
       }
@@ -49,7 +51,7 @@
    "provides" : {
       "Passwd::Keyring::PWSafe3" : {
          "file" : "lib/Passwd/Keyring/PWSafe3.pm",
-         "version" : "0.2001"
+         "version" : "0.2002"
       }
    },
    "release_status" : "stable",
@@ -65,5 +67,5 @@
          "url" : "http://bitbucket.org/Mekk/perl-keyring-pwsafe3"
       }
    },
-   "version" : "0.2001"
+   "version" : "0.2002"
 }

@@ -15,11 +15,11 @@ Passwd::Keyring::PWSafe3 - Password storage based on Password Safe encrypted fil
 
 =head1 VERSION
 
-Version 0.2001
+Version 0.2002
 
 =cut
 
-our $VERSION = '0.2001';
+our $VERSION = '0.2002';
 
 our $APP_NAME = "Passwd::Keyring";
 our $FOLDER_NAME = "Perl-Passwd-Keyring";
@@ -184,7 +184,7 @@ sub _prompt_for_password {
     }
 }
 
-# Zwraca rekord dla danych parametrów. Jeśli go nie ma, zwraca undef
+# Find data record for given params, or undef if not found
 sub _find_record {
     my ($self, $username, $realm) = @_;
     my $group = $self->{group};

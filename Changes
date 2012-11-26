@@ -1,10 +1,14 @@
 Revision history for Passwd::Keyring::PWSafe3
 
+0.2002	2012-11-26
+        A few (non-critical) test fixes.
+        Improved example name, installing example in share dir.
+
 0.2001	2012-11-21
         Minor documentation fixes.
 
 0.20	2012-11-20
-        Dependencies, comments, test skips etc updated to work with
+        Dependencies, comments, test skips etc updated to work with 
         Crypt::PWSafe3 v0.7, which resolves performance problems.
         Module is now reasonably fast and usable (once Crypt::PWSafe3
         >=0.7, and Bytes::Random::Secure are installed)

@@ -21,9 +21,14 @@ my $builder = Module::Build->new(
         'perl' => 5.006,
         'Crypt::PWSafe3' => '1.07', # 1.07 fixes huge performance problems...
         'Bytes::Random::Secure' => '0.09', # ... but only when this is present
+        'Term::ReadKey' => 0, # for interactive password prompts
     },
     recommends => {
         'Math::Random::ISAAC::XS' => 0,  # makes Bytes::Random::Secure faster
+    },
+
+    share_dir => {
+        dist => [ 'example' ],
     },
 
     create_makefile_pl => 'traditional',
