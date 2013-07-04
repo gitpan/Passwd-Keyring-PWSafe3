@@ -1,5 +1,11 @@
 Revision history for Passwd::Keyring::PWSafe3
 
+0.2003	2013-07-04
+	Bump required perl version (this is in fact Crypt::PWSafe3 dependency,
+	but as log as this module does not specify it, I get error reports...)
+
+	(bitbucket #1) Documentation contained wrong example of using set_password
+
 0.2002	2012-11-26
         A few (non-critical) test fixes.
         Improved example name, installing example in share dir.

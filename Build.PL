@@ -18,7 +18,7 @@ my $builder = Module::Build->new(
         'Module::Build' => '0.36',
     },
     requires => {
-        'perl' => 5.006,
+        'perl' => 5.009002, # pack(W) in Crypt::PWSafe3, http://search.cpan.org/~rgarcia/perl-5.9.2/pod/perl592delta.pod#Packing_and_UTF-8_strings
         'Crypt::PWSafe3' => '1.07', # 1.07 fixes huge performance problems...
         'Bytes::Random::Secure' => '0.09', # ... but only when this is present
         'Term::ReadKey' => 0, # for interactive password prompts

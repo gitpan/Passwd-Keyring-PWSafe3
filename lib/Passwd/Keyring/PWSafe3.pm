@@ -15,11 +15,11 @@ Passwd::Keyring::PWSafe3 - Password storage based on Password Safe encrypted fil
 
 =head1 VERSION
 
-Version 0.2002
+Version 0.2003
 
 =cut
 
-our $VERSION = '0.2002';
+our $VERSION = '0.2003';
 
 our $APP_NAME = "Passwd::Keyring";
 our $FOLDER_NAME = "Perl-Passwd-Keyring";
@@ -55,7 +55,7 @@ with other Passwd::Keyring backends.
         $password = <somehow interactively prompt for password>;
 
         # securely save password for future use
-        $keyring->set_password($username, "blahblah.com");
+        $keyring->set_password($username, $password, "blahblah.com");
     }
 
     login_somewhere_using($username, $password);

@@ -3,7 +3,7 @@ NAME
     encrypted files
 
 VERSION
-    Version 0.2002
+    Version 0.2003
 
 SYNOPSIS
     Password Safe implementation of Passwd::Keyring. Passwords are stored in
@@ -34,7 +34,7 @@ SYNOPSIS
             $password = <somehow interactively prompt for password>;
 
             # securely save password for future use
-            $keyring->set_password($username, "blahblah.com");
+            $keyring->set_password($username, $password, "blahblah.com");
         }
 
         login_somewhere_using($username, $password);
