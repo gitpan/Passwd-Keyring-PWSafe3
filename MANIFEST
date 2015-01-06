@@ -29,3 +29,5 @@ t/sampledb/control_print.pl
 t/sampledb/control_save.pl
 t/sampledb/test.psafe3
 t/sampledb/what_it_is_and_how_to_open.txt
+t/kwalitee.t
+t/kwalitee_extra.t

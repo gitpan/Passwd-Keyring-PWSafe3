@@ -1,5 +1,8 @@
 Revision history for Passwd::Keyring::PWSafe3
 
+0.2004	2015-01-03
+	Bump required Crypt::PWSafe3 version (attempts to use 0.07 cause my tests to fail due to minor error in Crypt::PWSafe3 fixed later).
+
 0.2003	2013-07-04
 	Bump required perl version (this is in fact Crypt::PWSafe3 dependency,
 	but as log as this module does not specify it, I get error reports...)

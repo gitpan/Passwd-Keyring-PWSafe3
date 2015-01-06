@@ -19,8 +19,8 @@ my $builder = Module::Build->new(
     },
     requires => {
         'perl' => 5.009002, # pack(W) in Crypt::PWSafe3, http://search.cpan.org/~rgarcia/perl-5.9.2/pod/perl592delta.pod#Packing_and_UTF-8_strings
-        'Crypt::PWSafe3' => '1.07', # 1.07 fixes huge performance problems...
-        'Bytes::Random::Secure' => '0.09', # ... but only when this is present
+        'Crypt::PWSafe3' => '1.12', # 1.07 fixes huge performance problems, 1.11 fixes pack errors reported when password expire is set (I have such in my tests)
+        'Bytes::Random::Secure' => '0.09', # performance fix works only when this module is present, without it PWSafe3 is very slow
         'Term::ReadKey' => 0, # for interactive password prompts
     },
     recommends => {
